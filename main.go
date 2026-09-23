@@ -42,7 +42,7 @@ type Group struct {
 }
 
 func main() {
-	dsn := "host=localhost user=postgres password=1234567890 dbname=postgres port=5432 sslmode=disable TimeZone=Asia/Shanghai"
+	dsn := "" // ur connection text to DB
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		log.Fatalf("Error with DB: %v", err)
